@@ -7,4 +7,4 @@ class Bookmark(models.Model):
     url = models.URLField('URL', unique=True)
 
     def __str__(self):
-        return "%s %s"%(self.title, self.url)
+        return self.title

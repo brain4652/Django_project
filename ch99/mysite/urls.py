@@ -21,6 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),  #추가
     path('bookmark/', include('bookmark.urls')),
-    path('blog/', include('blog.urls')),
-    
+    path('blog/', include('blog.urls')),    
 ]
