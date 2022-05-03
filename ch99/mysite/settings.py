@@ -108,8 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'ko-kr' # archive 접속시 오류가 발생하네요... ㅠㅜㅠ
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Seoul'
