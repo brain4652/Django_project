@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
+    'photo.apps.PhotoConfig',
     'taggit.apps.TaggitAppConfig',  # 추가
     'taggit_templatetags2',# 추가
 )
@@ -137,3 +138,6 @@ TAGGIT_LIMIT = 50   # 추가
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DISQUS_SHORTNAME = 'pydjango-web-programming-cnlddekezb'
+DISQUS_MY_DOMAIN = 'http://192.168.56.101:8000'
