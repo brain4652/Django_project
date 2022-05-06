@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'photo.apps.PhotoConfig',
     'taggit.apps.TaggitAppConfig',  # 추가
     'taggit_templatetags2',# 추가
+    'widget_tweaks',
 )
 
 MIDDLEWARE = [
@@ -130,6 +131,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 TAGGIT_CASE_INSENSITIVE = True  # 추가
 TAGGIT_LIMIT = 50   # 추가
