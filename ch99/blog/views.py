@@ -3,12 +3,13 @@ from django.views.generic import ListView, DetailView, TemplateView, CreateView,
 from django.views.generic.dates import ArchiveIndexView, YearArchiveView, MonthArchiveView, DayArchiveView, TodayArchiveView
 from django.conf import settings
 
+from blog.models import Post
+
 from django.views.generic import FormView
+from blog.forms import PostSearchForm
 from django.db.models import Q
 from django.shortcuts import render
 
-from blog.models import Post
-from blog.forms import PostSearchForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from mysite.views import OwnerOnlyMixin
@@ -78,7 +79,7 @@ class SearchFormView(FormView):
     
     def form_valid(self, form):
         searchWord = form.cleaned_data['search_word']
-        post_list = Post.objects.filter(Q(title__icontains=searchWord) | Q(description__icontains=searchWord)).distinct()
+        post_list = Post.objects.filter(Q(title__icontains=searchWord) | Q(description__icontains=searchWord) | Q(content__icontains=searchWord)).distinct()
         
         context = {}
         context['form'] = form
