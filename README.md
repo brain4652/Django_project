@@ -6,6 +6,7 @@
 **OS** : Ubuntu 20.04 (LTS) WSL2</br>
 **Editor** : VS Code</br>
 **Python** : 3.8.10</br>
+**DB** : mysql
 </br>
 기타환경은 requirement.txt 참고
 ## 2. 구현 기능
